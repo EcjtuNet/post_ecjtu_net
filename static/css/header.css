@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; text-decoration:none;}
+body{ background:#f6fcf8;}
+img{ border:none;}
+#header{width:auto;height:118px; background:#1a6518;}
+#head-content{width:910px;height:120px; margin:0 auto;}
+#head_logo{ float:left; margin:14px 0;}
+#head_nav{width:400px;height:87px; margin-left:550px;*margin-left:450px;padding-top:21px;}
+#nav_content{}
+#nav_content a{font-size:12px; font:"宋体"; color:#FFF;height:20px; line-height:20px; margin-left:41px; display:inline-block;float:left;}
+#nav_content a:hover{color:#43fc03;}
+#search{ background:url(../images/search.png);margin-top:40px; margin-left:145px;_margin-left:75px; width:197px; height:27px; float:left;}
+#searchbox{ outline: none; width:145px;border: 0 none; margin-left:23px;*margin-left:-122px; _margin-left:-52px; margin-top:8px;color:#696969; background:#f9f9f8;font-size: 13px;float:left;}
+#searchbox:focus{ color:#000;}
+#found{width:29px; height:27px; background:none; float:left; border:none 0px #FFFFFF; cursor:pointer;}
+#head_bottom{width:auto;height:12px; background:#114402;}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+a + img{ border:none;}
+
+#login_subject{width:773px; height:535px; margin:39px auto; text-align:center;}
+#login_content{width:773px; height:490px; background:url(../image_backstage/images_login/background.png);}
+#login_contentHead{ color:#f58604; font-size:25px; font-family:"微软雅黑"; padding:84px 0 0 25px;}
+.username_div{ width:385px; height:40px; line-height:40px; margin:32px auto 0; padding-left:25px;}
+.username_text,.password_text{ border:solid 1px #999;width:231px; height:36px;line-height:36px;}
+.password_div{width:385px; height:40px; line-height:40px; margin:21px auto 0;padding-left:30px;}
+.check_div{width:385px; height:25px; line-height:25px;text-align:left; padding-left:55px;margin:21px auto 0;}
+.check_text{border:solid 1px #999;width:128px; height:21px;line-height:21px;}
+.black-16Size{font-family:'微软雅黑'; font-size:16px;}
+.red-12Size{font-family:'微软雅黑'; font-size:12px; color:#F00;}
+.gery-12Size{font-family:"宋体"; font-size:12px; color:#aba8a8; margin:6px 0 auto 280px; display:block; text-align:left;}
+.blue-12Size{font-family:'微软雅黑'; font-size:12px; color:#4e83b4; display:block; float:left; margin-left:-5px; width:110px;}
+.check_content{width:250px; height:55px; line-height:55px; margin:10px auto 0; padding-left:32px;}
+.check_image{width:129px; height:52px; float:left;border:1px solid #4e83b4;}
+#login_image{margin:21px auto 0; width:220px; text-align:left;}

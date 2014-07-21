@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+#information div{ float:left;}
+#information{ width:975px; height:970px; margin:auto; text-align:center;}
+#sider_big{width:172px; height:826px; margin:17px auto;border-bottom:#6c6f6d; border-bottom:1px solid #c8cdc9; border-left:1px solid #c8cdc9; border-right:1px solid #c8cdc9;}
+#sider_small{width:172px; height:825px; border-bottom:1px solid #6c6f6d; background:url(../image_backstage/informationAdmin/blue.png);}
+#sider_small a{ display:block; width:172px; height:42px; line-height:42px; color:#FFF; font-family:"微软雅黑"; font-size:14px;}
+.grey-background{background:#a8aaaf;}
+#content{ width:779px; height:952px; margin:13px auto;}
+#add{ width:779px; height:207px; margin-left:22px;_margin-left:11px;}
+.addSubject{ width:779px; height:199px;}
+.up-down{ width:779px; height:4px;}
+.shadeTop,.listTop{width:771px; height:4px; background:url(../images/shadetop.png) repeat-x;}
+.shadeBotttom,.listBotttom{width:771px; height:4px; background:url(../images/shadebottom.png) repeat-x;}
+.shadeLeft{width:4px; height:199px; background:url(../images/shadeleft.png) repeat-y;}
+.shadeRight{width:4px; height:199px; background:url(../images/shaderight.png) repeat-y;}
+.listLeft{width:4px; height:606px; background:url(../images/shadeleft.png) repeat-y;}
+.listRight{width:4px; height:606px; background:url(../images/shaderight.png) repeat-y;}
+#noShade{width:771px; height:199px; background:#FFF;}
+.noshadeHead{width:771px; height:28px; line-height:28px; background:#2d2d2d; color:#FFF; font-family:"微软雅黑"; font-size:14px;}
+#noShade a{ color:#ff0600;}
+.shoujian-text{ width:215px; height:29px; margin-top:20px; margin-left:38px;line-height:29px;font-family:"微软雅黑"; font-size:16px;}
+.xiaoquSelect{ width:125px; height:30px; line-height:30px;margin-top:20px; margin-left:38px;font-family:"微软雅黑"; font-size:16px;}
+#nowList{width:779px; height:614px; margin-top:13px;margin-left:22px;_margin-left:11px;}
+
+/*.listSubject{width:779px; height:606px;}
+#listContent{width:771px; height:606px; background:#FFF;}
+#listHead{width:771px; height:41px; line-height:41px;border-bottom: 1px solid #C8CDC9; font-family:"微软雅黑"; font-size:16px; color:#0b9807;}
+.xuhao{margin-left:62px;_margin-left:31px; width:43px;}
+.shoujianren{margin-left:26px; width:62px;}
+.xiaoqu{ width:89px; margin-left:47px;}
+.leixing{margin-left:18px; width:105px;}
+.daojian{margin-left:31px; width:133px;}
+.caozuo{ margin-left:38px; width:100px;}
+.ulList{width:771px; height:27px; line-height:27px;border-bottom: 1px solid #C8CDC9; font-family:"宋体"; font-size:14px; color:#000000;}
+.ulList_box{ float:left; margin-left:25px; margin-top:8px; cursor:pointer;}
+.num{ margin-left:25px;*margin-left:15px; width:43px;}
+.delete{color:#ff0000;}
+.edit{color:#3d4bc9;}
+#listFoot{ width:771px; height:60px;}
+.listPage{/*width:230px;_width:245px;margin-left:220px;_margin-left:95px; margin-top:27px;}
+.listPage a{height:20px; line-height:20px; margin-left:15px; color:#c81486; font-family:"宋体"; font-size:16px; display:block; float:left;}
+#grey{ background:#b4b4b4; width:15px;}
+#submitImage{ margin-top:17px; margin-left:138px;}*/
+
+
+.listSubject{width:779px; height:606px;}
+#listContent{width:771px; height:606px; background:#FFF;}
+#listHead{width:771px; height:41px; line-height:41px;border-bottom: 1px solid #C8CDC9; font-family:"微软雅黑"; font-size:16px; color:#0b9807;}
+#xuhao{margin-left:62px;_margin-left:31px; width:43px;}
+#shoujianren{margin-left:26px; width:62px;}
+#xiaoqu{ width:89px; margin-left:47px; height:20px;}
+#leixing{margin-left:18px; width:105px; height:20px;}
+#daojian{margin-left:31px; width:133px;}
+#caozuo{ margin-left:38px; width:100px;}
+.xuhao{margin-left:62px;_margin-left:31px; width:43px;}
+.shoujianren{margin-left:26px; width:62px;}
+.xiaoqu{ width:79px; margin-left:52px; height:20px;cursor:pointer;}
+.leixing{margin-left:18px; width:92px; height:20px;cursor:pointer;}
+.daojian{margin-left:31px; width:133px;}
+.caozuo{ margin-left:38px; width:100px;}
+.ulList{width:771px; height:27px; line-height:27px;border-bottom: 1px solid #C8CDC9; font-family:"宋体"; font-size:14px; color:#000000;}
+.change-list input,select{ border:none;font-family: 宋体;font-size: 14px;height: 27px;line-height: 27px;color:#000000; text-align:center;background:#FFF;} 
+.ulList_box{ float:left; margin-left:25px; margin-top:8px; cursor:pointer;}
+.num{ margin-left:25px;*margin-left:15px; width:43px;cursor:pointer;}
+.delete{color:#ff0000;}
+.edit{color:#3d4bc9; display:inline;}
+.submit{color:#3d4bc9;}
+#listFoot{ width:771px; height:60px;}
+.listPage{width:230px;_width:245px;margin-left:220px;_margin-left:95px; margin-top:27px;}
+.listPage a{height:20px; line-height:20px; margin-left:15px; color:#c81486; font-family:"宋体"; font-size:16px; display:block; float:left;}
+#grey{ background:#b4b4b4; width:15px;}
+#submitImage{ margin-top:17px; margin-left:218px;}

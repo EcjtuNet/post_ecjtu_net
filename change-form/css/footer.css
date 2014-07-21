@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+#footer{ width:630px; margin:50px auto;}/* width:580px;*/
+#backstage-footer{margin:29px auto;}
+#footer a:hover,#backstage-footer a:hover{color:#4697c5;}
+#footer p,#backstage-footer p{ color:#c9ceca; font-size:12px; display:block; float:left; margin-left:5px;_margin-left:2px; }
+#footer p a,#backstage-footer p a{ text-decoration:underline;color:#c9ceca;}
