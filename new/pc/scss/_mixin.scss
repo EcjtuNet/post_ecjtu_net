@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 圆角
+ --------------------------------------------------*/
+@mixin radius($radius:5px) {
+    border-radius : $radius;
+    -webkit-border-radius : $radius;
+    -moz-border-radius : $radius;
+    -ms-border-radius : $radius;
+}
+
+@mixin appearance($style:button) {
+    appearance : $style;
+    -moz-appearance : $style;
+    -webkit-appearance : $style;
+}
+
+@mixin animation($name, $duration, $timing-function:ease, $iteration-count:1, $direction:normal) {
+    -webkit-animation : $name $duration $timing-function $iteration-count $direction;
+       -moz-animation : $name $duration $timing-function $iteration-count $direction;
+         -o-animation : $name $duration $timing-function $iteration-count $direction;
+            animation : $name $duration $timing-function $iteration-count $direction;
+}
+
+@mixin rotate($value) {
+    -webkit-transform : rotate($value);
+       -moz-transform : rotate($value);
+        -ms-transform : rotate($value);
+         -o-transform : rotate($value);
+}

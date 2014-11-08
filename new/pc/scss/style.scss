@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* post.ecjtu.net
+ *@author           GeeKavalon
+ *@version          0.1
+ *@last-time        2014.10.20
+ *
+ */
+
+
+/* 文件载入
+ ----------------------------------------------------------*/
+ @import  "data";                    /* 变量文件  */
+ @import  "reset";                   /* css reset */
+ @import  "mixin";                   /* 混入文件  */
+ @import  "csshake";                 /* csshake   */
+ @import  "animation";				 /* animation */
+
+
+/* 页面
+ ---------------------------------------------------------- */
+body {
+	background: url(../images/bg.png) repeat;
+}
+#header {
+	width: 100%;
+	height: $header-height;
+	border-bottom: 7px solid $header-border;
+	background: $header-bg;
+}
+
+#head {
+	position: relative;
+	width: $head-width;
+	height: 100%;
+	margin: 0 auto;
+
+	h1 {
+		float: left;
+		width: 147px;
+		height: 100%;
+	}
+}
+
+#logo {
+	display: block;
+	width: 147px;
+	height: 35px;
+	margin: 5px 0;
+	background: url(../images/sprite.png) 0px 0px no-repeat;
+}
+
+#link {
+	float: right;
+	padding-right: $search-width;
+
+	ul li {
+		float: left;
+		width: 68px;
+		height: $header-height;
+		margin: 0 12px;
+
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			font: normal 16px/45px Arial, sans-serif;
+			color: $head-link;
+			transition: .3s ease;
+
+			&:hover {
+				color: $head-link-act;
+			}
+		}
+	}
+}
+
+#searchBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: $search-width;
+	height: 100%;
+}
+
+#search {
+	width: $search-width;
+	height: $search-height;
+	box-sizing: border-box;
+	margin-top: ($header-height - $search-height)/2;
+	padding: 0 0 0 3px;
+	border: none;
+	border-radius: 3px;
+	font: normal 16px/27px Microsoft Yahei, Arial, sans-serif;
+}
+
+#container {
+	width: 100%;
+	height: auto;
+	// background: url(../images/bg.png) repeat;
+}
+
+#content {
+	position: relative;
+	width: $content-width;
+	margin: 0 auto;
+}
+
+#nav {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: $nav-width;
+	margin: 96px 56px 0 0;
+}
+
+#south-north {
+	height: $sn-height;
+}
+
+#south, #north {
+	float: left;
+	display: inline-block;
+	width: $sn-w;
+	height: $sn-h;
+	border-radius: $sn-h;
+	transition: .3s;
+}
+#south {
+	background: url(../images/sprite.png) 0px -40px no-repeat;
+
+	&:hover {
+		background: url(../images/sprite.png) 0px -103px no-repeat;
+	}
+}
+#north {
+	margin-left: 60px;
+	background: url(../images/sprite.png) -60px -39px no-repeat;
+
+	&:hover {
+		background: url(../images/sprite.png) -61px -102px no-repeat;
+	}
+}
+
+#bigBox {
+	width: $bigBox-w;
+	height: $bigBox-h;
+	padding-top: 50px;
+	padding-left: $nav-width + 56px;
+}
+
+#smallBox {
+	width: $smallBox-w;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	// background: $smallBox-bg;
+	border-radius: 18px;
+	box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+#contact {
+	padding: 52px 0 0 0;
+	text-align: center;
+	font: normal 12px/16px Arial, sans-serif;
+	color: $smallBox-bg;
+
+	a {
+		margin: 0 3px;
+		color: $smallBox-bg;
+		text-decoration: underline;
+		transition: .3 ease;
+
+		&:hover {
+			color: $head-link-act;
+		}
+	}
+}

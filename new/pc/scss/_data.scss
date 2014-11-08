@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*
+ * 变量文件
+ */
+
+/* 路径
+ ----------------------------------------------------------*/
+
+/* 配色
+ ----------------------------------------------------------*/
+$header-bg: #323232;
+$header-border: #1b1b1b;
+$head-link: #cfcfcf;
+$head-link-act: #6eaa88;
+$smallBox-bg: #93908d;
+
+/* 布局
+ ----------------------------------------------------------*/
+$head-width: 868px;
+$header-height: 45px;
+$search-width: 213px;
+$search-height: 27px;
+
+$content-width: 868px;
+$nav-width: 180px;
+$sn-height: 102px;
+$sn-w: 60px;
+$sn-h: 63px;
+
+$bigBox-w: 632px;
+$bigBox-h: 503px;
+$smallBox-w: 542px;
+
+
+/* 字体
+ ----------------------------------------------------------*/
+
+/* 其他
+ ----------------------------------------------------------*/
+/* ::-moz-selection {
+    background: $theme-color;
+}
+::-webkit-selection {
+    background: $theme-color;
+}
+::selection {
+    background: $theme-color;
+} */
