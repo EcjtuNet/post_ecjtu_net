@@ -1,17 +1,18 @@
 <?php
+define('BASEPATH', true);
 require 'application/config/database.php';
 require 'Slim/Slim.php';
 require 'medoo.min.php';
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
-$medoo = new medoo([
+$medoo = new medoo(array(
     'database_type' => 'mysql',
     'database_name' => $db['default']['database'],
     'server' => $db['default']['hostname'],
     'username' => $db['default']['username'],
     'password' => $db['default']['password'],
     'charset' => 'utf8',
-]);
+));
 
 $app->get('/list', function () {
     $page = $app->request->get('page') || 1;
@@ -22,13 +23,13 @@ $app->get('/list', function () {
     $time_after = $app->request->get('time_after');
     $time_before = $app->request->get('time_before');
 
-    $filter = [];
+    $filter = array();
     if($key) $filter['addressee']=$key;
     if($area) $filter['area']=$area;
     if($type) $filter['type']=$type;
     if($time_after) $filter['time[>=]']=$time_after;
     if($time_before) $filter['time[<=]']=$time_before;
-    $filter['LIMIT'] = [($page-1)*$limit, $limit];
+    $filter['LIMIT'] = array(($page-1)*$limit, $limit);
 
     $datas = $medoo->select('post_info', '*', $filter);
     echo json_encode($datas);
