@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';//demon_keepcoding
-$db['default']['password'] = 'EcjtuNet7#214_51';//418584492demon
+$db['default']['username'] = 'post_ecjtu_net';//demon_keepcoding
+$db['default']['password'] = 'TmPyRrbrATnCsGpE';//418584492demon
 $db['default']['database'] = 'post_ecjtu_net';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
