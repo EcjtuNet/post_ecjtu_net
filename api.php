@@ -14,21 +14,20 @@ $medoo = new medoo(array(
     'charset' => 'utf8'
 ));
 
-$app->get('/list', function () {
-    $page = $app->request->get('page') || 1;
-    $limit = $app->request->get('limit') || 20;
+$app->get('/list', function () use ($app, $medoo) {
+    $page = $app->request->get('page') ? $app->request->get('page') : 1;
+    $limit = $app->request->get('limit') ? $app->request->get('limit') : 20;
     $key = $app->request->get('key');
     $area = $app->request->get('area');
     $type = $app->request->get('type');
-    $time_after = $app->request->get('time_after');
-    $time_before = $app->request->get('time_before');
+    $time_after = $app->request->get('time_after') ? $app->request->get('time_after') : '1970-1-1';
+    $time_before = $app->request->get('time_before') ? $app->request->get('time_before') : '2050-1-1';
 
     $filter = array();
     if($key) $filter['addressee']=$key;
     if($area) $filter['area']=$area;
     if($type) $filter['type']=$type;
-    if($time_after) $filter['time[>=]']=$time_after;
-    if($time_before) $filter['time[<=]']=$time_before;
+    $filter['time[<>]']=array($time_after, $time_before);
     $filter['LIMIT'] = array(($page-1)*$limit, $limit);
 
     $datas = $medoo->select('post_info', '*', $filter);
