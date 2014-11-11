@@ -24,11 +24,12 @@ $app->get('/list', function () use ($app, $medoo) {
     $time_before = $app->request->get('time_before') ? $app->request->get('time_before') : '2050-1-1';
 
     $filter = array();
-    if($key) $filter['addressee']=$key;
-    if($area) $filter['area']=$area;
-    if($type) $filter['type']=$type;
+    if($key) $filter['LIKE']['addressee']=$key;
+    if($area) $filter['LIKE']['area']=$area;
+    if($type) $filter['LIKE']['type']=$type;
     $filter['time[<>]']=array($time_after, $time_before);
     $filter['LIMIT'] = array(($page-1)*$limit, $limit);
+    $filter['ORDER'] = 'time DESC';
 
     $datas = $medoo->select('post_info', '*', $filter);
     echo json_encode($datas);
