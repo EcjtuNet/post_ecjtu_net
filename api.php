@@ -11,7 +11,7 @@ $medoo = new medoo(array(
     'server' => $db['default']['hostname'],
     'username' => $db['default']['username'],
     'password' => $db['default']['password'],
-    'charset' => 'utf8',
+    'charset' => 'utf8'
 ));
 
 $app->get('/list', function () {
@@ -34,3 +34,5 @@ $app->get('/list', function () {
     $datas = $medoo->select('post_info', '*', $filter);
     echo json_encode($datas);
 });
+
+$app-run();
