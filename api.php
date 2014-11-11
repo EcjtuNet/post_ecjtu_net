@@ -35,4 +35,4 @@ $app->get('/list', function () {
     echo json_encode($datas);
 });
 
-$app-run();
+$app->run();
