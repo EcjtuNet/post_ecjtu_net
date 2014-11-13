@@ -128,16 +128,16 @@ body {
 	transition: .3s;
 }
 #south {
-	background: url(../images/sprite.png) 0px -40px no-repeat;
+	background: url(../images/south-icon.png) no-repeat;
 
 	&:hover {
-		background: url(../images/sprite.png) 0px -103px no-repeat;
+		background: url(../images/south-icon-h.png) no-repeat;
 	}
 	&:before {
 		content: "";
 		width: 34px;
 		height: 17px;
-		background: url(../images/sprite.png) 0px -166px no-repeat;
+		background: url(../images/south.png) no-repeat;
 		position: absolute;
 		top: 75px;
 		left: 11px;
@@ -146,16 +146,16 @@ body {
 }
 #north {
 	margin-left: 60px;
-	background: url(../images/sprite.png) -60px -39px no-repeat;
+	background: url(../images/north-icon.png) no-repeat;
 
 	&:hover {
-		background: url(../images/sprite.png) -61px -102px no-repeat;
+		background: url(../images/north-icon-h.png) no-repeat;
 	}
 	&:before {
 		content: "";
 		width: 34px;
 		height: 17px;
-		background: url(../images/sprite.png) -39px -166px no-repeat;
+		background: url(../images/north.png) no-repeat;
 		position: absolute;
 		top: 75px;
 		left: 132px;
@@ -172,61 +172,60 @@ body {
 	li {
 		position: relative;
 		width: 124px;
+		margin: 12px 0;
 		border-radius: 7px;
-		// width: 130px;
-		// height: 42px;
-		// margin: 13px 25px;
 		&:hover {
-			background: #e9e5e1;
-			box-shadow: inset 0 0 9px rgba(0,0,0,.3);
-			// background: url(../images/sprite.png) -4px -345px no-repeat;
+			background: -webkit-linear-gradient(#e2e0dc, #f3eeeb);
+			background: -o-linear-gradient(#e2e0dc, #f3eeeb);
+			background: linear-gradient(#e2e0dc, #f3eeeb);
+			box-shadow: inset 0 3px 5px rgba(0,0,0,.1), 0 1px 2px rgba(255,255,255,.9);
 		}
 
 		&:nth-child(1) .chn {
-			background-position: -20px -188px;
+			background: url(../images/package.png) no-repeat;
 			&:before {
-				background-position: 0px -187px;
+				background: url(../images/package-icon.png) no-repeat;
 			}
 		}
 		&:nth-child(2) .chn {
-			background-position: -20px -208px;
+			background: url(../images/letter.png) no-repeat;
 			&:before {
-				background-position: 0px -207px;
+				background: url(../images/letter-icon.png) no-repeat;
 			}
 		}
 		&:nth-child(3) .chn {
-			background-position: -21px -228px;
+			background: url(../images/print.png) no-repeat;
 			&:before {
-				background-position: 0px -227px;
+				background: url(../images/print-icon.png) no-repeat;
 			}
 		}
 		&:nth-child(4) .chn {
-			background-position: -20px -247px;
+			background: url(../images/order.png) no-repeat;
 			&:before {
-				background-position: 0px -247px;
+				background: url(../images/order-icon.png) no-repeat;
 			}
 		}
 		&:nth-child(5) .chn {
-			background-position: -20px -267px;
+			background: url(../images/return.png) no-repeat;
 			&:before {
-				background-position: 0px -266px;
+				background: url(../images/return-icon.png) no-repeat;
 			}
 		}
 
 		&:nth-child(1) .eng {
-			background-position: -22px -289px;
+			background: url(../images/package-en.png) no-repeat;
 		}
 		&:nth-child(2) .eng {
-			background-position: -22px -300px;
+			background: url(../images/letter-en.png) no-repeat;
 		}
 		&:nth-child(3) .eng {
-			background-position: -22px -313px;
+			background: url(../images/print-en.png) no-repeat;
 		}
 		&:nth-child(4) .eng {
-			background-position: -22px -324px;
+			background: url(../images/order-en.png) no-repeat;
 		}
 		&:nth-child(5) .eng {
-			background-position: -22px -336px;
+			background: url(../images/return-en.png) no-repeat;
 		}
 	}
 }
@@ -236,8 +235,7 @@ body {
 	position: relative;
 	width: 80px;
 	height: 20px;
-	margin: 23px 0 23px 38px;
-	background: url(../images/sprite.png) no-repeat;
+	margin: 4px 0 14px 38px;
 
 	&:before {
 		content: "";
@@ -253,7 +251,7 @@ body {
 .eng {
 	display: inline-block;
 	position: absolute;
-	top: 48px;
+	top: 28px;
 	left: 38px;
 	width: 81px;
 	height: 10px;
