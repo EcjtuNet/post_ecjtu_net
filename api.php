@@ -34,8 +34,9 @@ $app->get('/list', function () use ($app, $medoo) {
     $datas = $medoo->select('post_info', '*', $filter);
     if($app->request->get('callback')){
         echo $app->request->get('callback') . '(' . json_encode($datas) . ')';
+    }else{
+        echo json_encode($datas);
     }
-    echo json_encode($datas);
 });
 
 $app->run();
