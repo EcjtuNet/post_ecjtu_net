@@ -32,6 +32,9 @@ $app->get('/list', function () use ($app, $medoo) {
     $filter['ORDER'] = 'time DESC';
 
     $datas = $medoo->select('post_info', '*', $filter);
+    if($app->request->get('callback')){
+        echo $app->request->get('callback') . '(' . json_encode($datas) . ')';
+    }
     echo json_encode($datas);
 });
 
