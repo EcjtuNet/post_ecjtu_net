@@ -4162,14 +4162,26 @@ body {
   height: 100%; }
 
 #search {
-  width: 213px;
+  float: left;
+  width: 186px;
   height: 27px;
   box-sizing: border-box;
   margin-top: 9px;
   padding: 0 0 0 3px;
   border: none;
-  border-radius: 3px;
+  border-radius: 3px 0 0 3px;
   font: normal 16px/27px Microsoft Yahei, Arial, sans-serif; }
+
+#submit {
+  float: left;
+  width: 27px;
+  height: 27px;
+  margin-top: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background: white url(../images/search.png) center center no-repeat;
+  cursor: pointer; }
 
 #container {
   width: 100%;
@@ -4197,7 +4209,8 @@ body {
   width: 60px;
   height: 63px;
   border-radius: 63px;
-  transition: .3s; }
+  transition: .3s;
+  text-indent: -9999em; }
 
 #south {
   background: url(../images/south-icon.png) no-repeat; }
@@ -4279,7 +4292,8 @@ body {
   position: relative;
   width: 80px;
   height: 20px;
-  margin: 4px 0 14px 38px; }
+  margin: 5px 0 13px 38px;
+  text-indent: -9999em; }
   .chn:before {
     content: "";
     position: absolute;
@@ -4318,7 +4332,8 @@ body {
     display: block;
     height: 37px; }
   #title li {
-    float: left; }
+    float: left;
+    text-indent: -9999em; }
   #title .num {
     width: 36px;
     height: 17px;
@@ -4391,14 +4406,15 @@ body {
   #page ul {
     display: inline-block;
     width: 26px;
-    margin: 6px 0; }
+    margin: 6px 0;
+    text-align: center;
+    font: normal 12px/12px Microsoft Yahei, Arial, sans-serif; }
   #page li a {
     display: inline-block;
     width: 26px;
     height: 21px;
     margin: 6px 0;
-    text-align: center;
-    font-family: Microsoft Yahei, Arial, sans-serif;
+    font: normal 16px/16px Microsoft Yahei, Arial, sans-serif;
     color: #73a991; }
 
 #arrowPre {

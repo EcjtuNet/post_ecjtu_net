@@ -3,9 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>日新邮包</title>
-	<link rel="stylesheet" href="./pc/css/style.css" />
-	<script type="text/javascript" src="./pc/scripts/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="./pc/scripts/post.js"></script>
+	<link type="text/css" rel="stylesheet"  href="./pc/css/style.css" />
+	<script src="./pc/scripts/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./pc/scripts/globe.js"></script>
+	<script type="text/javascript" src="./pc/scripts/page.js"></script>
+	<script type="text/javascript" src="./pc/scripts/sort.js"></script>
+	<script type="text/javascript" src="./pc/scripts/getData.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -20,6 +23,7 @@
 			</div>
 			<div id="searchBar">
 				<input id="search" type="text" />
+				<input id="submit" type="submit" value="" />
 			</div>
 		</div>
 	</div>
@@ -27,16 +31,16 @@
 		<div id="content">
 			<div id="nav">
 				<div id="south-north">
-					<a href="" id="south"></a>
-					<a href="" id="north"></a>
+					<a href="" id="south">南区</a>
+					<a href="" id="north">北区</a>
 				</div>
 				<div id="sort">
 					<ul>
-						<li><a href=""><span class="chn"></span><span class="eng"></span></a></li>
-						<li><a href=""><span class="chn"></span><span class="eng"></span></a></li>
-						<li><a href=""><span class="chn"></span><span class="eng"></span></a></li>
-						<li><a href=""><span class="chn"></span><span class="eng"></span></a></li>
-						<li><a href=""><span class="chn"></span><span class="eng"></span></a></li>
+						<li><a href=""><span class="chn">包裹</span><span class="eng"></span></a></li>
+						<li><a href=""><span class="chn">挂号信</span><span class="eng"></span></a></li>
+						<li><a href=""><span class="chn">印刷品</span><span class="eng"></span></a></li>
+						<li><a href=""><span class="chn">汇款单</span><span class="eng"></span></a></li>
+						<li><a href=""><span class="chn">退件</span><span class="eng"></span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -44,34 +48,34 @@
 				<div id="smallBox">
 					<h2 id="title">
 						<ul>
+							<li class="num">序号</li>
+							<li class="name">收件人</li>
+							<li class="sn">校区</li>
+							<li class="sort">类型</li>
+							<li class="date">到件日期</li>
+						</ul>
+					</h2>
+					<div id="list">
+						<ul>
 							<li class="num"></li>
 							<li class="name"></li>
 							<li class="sn"></li>
 							<li class="sort"></li>
 							<li class="date"></li>
 						</ul>
-					</h2>
-					<div id="list">
 						<ul>
-							<li class="num">1</li>
-							<li class="name">小黑</li>
-							<li class="sn">南区</li>
-							<li class="sort">书</li>
-							<li class="date">2014-11-10</li>
+							<li class="num"></li>
+							<li class="name"></li>
+							<li class="sn"></li>
+							<li class="sort"></li>
+							<li class="date"></li>
 						</ul>
 						<ul>
-							<li class="num">1</li>
-							<li class="name">小黑</li>
-							<li class="sn">南区</li>
-							<li class="sort">书</li>
-							<li class="date">2014-11-10</li>
-						</ul>
-						<ul>
-							<li class="num">1</li>
-							<li class="name">小黑</li>
-							<li class="sn">南区</li>
-							<li class="sort">书</li>
-							<li class="date">2014-11-10</li>
+							<li class="num"></li>
+							<li class="name"></li>
+							<li class="sn"></li>
+							<li class="sort"></li>
+							<li class="date"></li>
 						</ul>
 						<ul>
 							<li class="num"></li>
@@ -141,13 +145,17 @@
 				<div id="page">
 					<a href="" id="arrowPre"></a>
 					<ul>
-						<li><a href="">1</a></li>
+						<li class="select"><a href="">1</a></li>
 						<li><a href="">2</a></li>
 						<li><a href="">3</a></li>
-						<li class="select"><a href="">4</a></li>
+						<li><a href="">4</a></li>
 						<li><a href="">5</a></li>
 						<li><a href="">6</a></li>
 						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">9</a></li>
+						<!-- ·<br>·<br>·<br> -->
+						<li><a href="">10</a></li>
 					</ul>
 					<a href="" id="arrowNex"></a>
 				</div>
