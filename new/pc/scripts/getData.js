@@ -1,59 +1,53 @@
 $(document).ready(function() {
-	var searchInfo = {
-		page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-		limit: 10,
-		type: ['包裹', '挂号信', '印刷品', '汇款单', '退件'],
-		area: ['南区', '北区'],
-		key: '',
-		time_before: '',
-		time_after: ''
-	}
-	getData();
-	/*var JSONP = document.createElement('script');
-		JSONP.type = 'text/javascript';
-		JSONP.src = URL;
-	document.getElementsByTagName('head')[0].appendChild(JSONP);
-	$.ajax({
-		url: URL,
-		type: 'GET',
-		dataType: 'json',
-		data: '',
-		success: function (data) {
-			console.log(data)
-		},
-	})
-	.done(function() {
-		console.log("success");
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});*/
+	var URL = "http://post.ecjtu.net/api.php/list?";
+	getData(URL);
 });
 
-function getData () {
-	$.get(URL, function(data) {
-		console.log(data);
-	});
+function getData (url) {
+	var lmt = "&limit=12";
+	$.ajax({
+		url: url + 'page=1' + lmt,
+		type: 'GET',
+		dataType: 'jsonp',
+		data: '',
+		jsonpCallback: 'func',
+	})
+	// .done(function() {
+	// 	console.log("success");
+	// })
+	// .fail(function() {
+	// 	console.log("error");
+	// })
+	// .always(function() {
+	// 	console.log("complete");
+	// });
 }
 
-function pageDisp (box) {
-	for (var i = 0; i < box.children('ul').length; i++) {
-		listDisp(i);
+function func (json) {
+	var dispBox = $('#list ul');
+	var page = Math.floor(json.length % $('#list ul').length);
+	dispInfo(dispBox, json);
+	URL = "http://post.ecjtu.net/api.php/list?";
+}
+
+function dispInfo (parent, data) {
+	var cal, // 存放到件日期
+		idx; // 存放序号
+	var num = parent.find('.num'),  // 序号
+		name = parent.find('.name'),// 姓名
+		sn = parent.find('.sn'),    // 校区
+		sort = parent.find('.sort'),// 类型
+		date = parent.find('.date');// 到件日期
+	// console.log(num);
+	for (var i = 0; i < parent.length; i++) {
+		idx = data.indexOf(data[i]) + 1;
+		num.eq(i).text(idx);
+
+		name.eq(i).text(data[i].addressee);
+		sn.eq(i).text(data[i].area);
+		sort.eq(i).text(data[i].type);
+
+		cal = data[i].time.substr(0, 10);
+		date.eq(i).text(cal);
 	};
-}
-
-function listDisp (value) {
-	var num = $(this).children('.num'),
-		name = $(this).children('.name'),
-		sn = $(this).children('.sn'),
-		sort = $(this).children('.sort'),
-		date = $(this).children('.date');
-	num.text(data[i].info_id);
-	name.text(data[i].addressee);
-	sn.text(data[i].area);
-	sort.text(data[i].type);
-	date.text(data[i].time);
 }

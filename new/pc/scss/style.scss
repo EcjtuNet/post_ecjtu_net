@@ -74,7 +74,7 @@ body {
 		}
 	}
 }
-
+// --- 搜索栏 ---
 #searchBar {
 	position: absolute;
 	top: 0;
@@ -117,7 +117,7 @@ body {
 	width: $content-width;
 	margin: 0 auto;
 }
-
+//----- 导航 -----
 #nav {
 	position: absolute;
 	left: 0;
@@ -175,7 +175,7 @@ body {
 		color: $header-bg;
 	}
 }
-
+// ---- 分类 ----
 #sort {
 	width: 100%;
 	height: auto;
@@ -278,7 +278,7 @@ body {
 	padding-top: 50px;
 	padding-left: $nav-width + 56px;
 }
-
+// --- 信息展示 ---
 #smallBox {
 	position: relative;
 	width: $smallBox-w;
@@ -359,14 +359,14 @@ body {
 		margin: 20px 0 0 56px;
 	}
 	.sort {
-		width: 36px;
+		width: 72px;
 		height: 17px;
-		margin: 20px 0 0 64px;
+		margin: 20px 0 0 48px;
 	}
 	.date {
 		width: 96px;
 		height: 17px;
-		margin: 20px 0 0 72px;
+		margin: 20px 0 0 54px;
 	}
 }
 
@@ -410,7 +410,7 @@ body {
 
 
 
-
+// --- 翻页按钮 ---
 #arrowPre {
 	display: inline-block;
 	width: 26px;
@@ -423,7 +423,7 @@ body {
 	height: 20px;
 	background: url(../images/sprite.png) -100px -279px no-repeat;
 }
-
+// --- 联系我们 ---
 #contact {
 	padding: 52px 0 0 0;
 	text-align: center;

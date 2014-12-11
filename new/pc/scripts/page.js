@@ -10,7 +10,7 @@ $(document).ready(function() {
 	arrowClick(arrowPre, arrowNex, pageList, 'select');
 });
 
-function pageEndIn (list, num) {
+function pageEndIn (list, num) { // 获取当前最大页码
 	var i = list.length - 1;
 	// console.log(list.eq(i-1))
 	list.eq(i).children('a').text(num);
@@ -21,16 +21,23 @@ function pageClick(list, className) { // 单击页码切换分页
 		event.preventDefault();
 		$(this).parent().children().removeClass(className);
 		$(this).addClass(className);
+		var pageNum = $(this).text();
+		$.ajax({
+			url: URL + '&page=' + pageNum,
+			type: 'GET',
+			dataType: 'jsonp',
+			data: '',
+			jsonpCallback: 'func',
+		})
 	});
 }
 
 function arrowClick(pre, nex, list, className) { // 单击箭头切换分页
-	var arrowTop = false,
-		arrowBot = false;
 	var i;
 	var len = list.length;
+	var pageNum;
 	// console.log(len)
-	pre.click(function(event) {
+	pre.click(function(event) { // 上一页按钮
 		event.preventDefault();
 		for (i = 0; i < len; i++) {
 			// console.log(list.eq(i))
@@ -44,9 +51,18 @@ function arrowClick(pre, nex, list, className) { // 单击箭头切换分页
 			list.eq(i).removeClass(className)
 			list.eq(i-1).addClass(className);
 		};
+		pageNum = list.eq(i-1).text();
+		$.ajax({
+			url: URL + '&page=' + pageNum,
+			type: 'GET',
+			dataType: 'jsonp',
+			data: '',
+			jsonpCallback: 'func',
+		})
 	});
-	nex.click(function(event) {
+	nex.click(function(event) { // 下一页按钮
 		event.preventDefault();
+		var pageNum;
 		for (i = 0; i < len; i++) {
 			// console.log(list.eq(i))
 			if (list.eq(i).hasClass(className)) {
@@ -60,5 +76,13 @@ function arrowClick(pre, nex, list, className) { // 单击箭头切换分页
 			list.eq(i).removeClass(className)
 			list.eq(i+1).addClass(className);
 		}
+		pageNum = list.eq(i+1).text();
+		$.ajax({
+			url: URL + '&page=' + pageNum,
+			type: 'GET',
+			dataType: 'jsonp',
+			data: '',
+			jsonpCallback: 'func',
+		})
 	});
 }

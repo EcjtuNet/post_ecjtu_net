@@ -4380,13 +4380,13 @@ body {
   height: 17px;
   margin: 20px 0 0 56px; }
 #list .sort {
-  width: 36px;
+  width: 72px;
   height: 17px;
-  margin: 20px 0 0 64px; }
+  margin: 20px 0 0 48px; }
 #list .date {
   width: 96px;
   height: 17px;
-  margin: 20px 0 0 72px; }
+  margin: 20px 0 0 54px; }
 
 #page {
   position: absolute;

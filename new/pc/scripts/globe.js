@@ -1,1 +1,0 @@
-var URL = '../api.php/list?';
