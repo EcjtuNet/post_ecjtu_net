@@ -1,0 +1,406 @@
+/*		全局设置		*/
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: 16px;
+}
+
+/*		header		*/
+#header{
+	width: 100%;
+	height: 40px;
+	background: #acd9bf;
+	border-bottom: 4px solid #72a286;
+	position: fixed;
+}
+	#head{
+		width: 100%;
+		height: 22px;
+		float: left;
+		margin-top: 8px; 
+	}
+		#logo{
+			width: 108px;
+			height: 23px;
+			background: #acd9bf url(../images/sprite.png) 0 0 no-repeat;
+			float: left;
+			margin-left:12px;
+		}
+			#logo a{
+				display: block;
+				color: transparent;
+				font-size: 0.001em;
+			}
+		.searchBar{
+			width: 30px;
+			height: 22px;
+			float: right;
+			margin-right: 7%;
+			background: #acd9bf url(../images/sprite.png) -109px 0 no-repeat;
+		}
+			.searchBar a{
+				display: block;
+				color: transparent;
+				font-size: 0.01em;
+			}
+
+/*		container		*/
+#container{
+	float: left;
+	width: 100%;
+	height: 100%;
+	background: url(../images/background.png) repeat;
+	overflow: hidden;
+
+	}
+	#content{
+		width: 86%;
+		height: 80%;
+		position: relative;
+		margin: 60px auto 0;
+		border-radius: 16px;
+		-moz-border-radius: 16px;
+		background-color: rgba(0,0,0,.34);
+
+	}
+			/*		列表头部		*/
+			#title ul{
+				height: 7%;
+				padding: 12px 8px 4px;
+				font-size: 0;
+			}
+				#title ul li{
+					text-align: center;
+					display: inline-block;
+					width: 25%;
+					font: normal 9px "YouYuan",Sans-Serif;
+				}
+				#title ul li:nth-child(2){
+					width: 20%;
+				}
+				#title ul li:nth-child(4){
+					width: 30%;
+				}
+			/*		列表内容		*/	
+			#list{
+				overflow-y: scroll;
+				overflow-x: hidden;
+				height: 93%;
+			}
+			.info{
+				margin: 4px 8px;
+			}
+				.info ul{
+					height: 18px;
+					color: #fff;
+					font-size: 0;
+					zoom: 1;
+					white-space: nowrap;
+					letter-spacing: 2px;
+				}
+					.info ul li{
+						float: left;
+						text-align: center;
+						display: inline-block;
+						width: 25%;
+						font: lighter 15px "Microsoft YaHei",Sans-Serif;
+						line-height: 15px;
+						text-overflow:ellipsis; 
+						-o-text-overflow:ellipsis;
+						white-space:nowrap; 
+						overflow:hidden;
+					}
+					.info ul li:nth-child(2){
+						width: 20%;
+					}
+					.info ul li:nth-child(4){
+						width: 30%;
+						font: lighter 12px "Microsoft YaHei",Sans-Serif;
+						text-overflow: clip; 
+						-o-text-overflow: clip;
+						letter-spacing: 0px;
+						word-spacing: 40px;
+						position: relative;
+						left: 10px;
+					}
+					li.info:nth-child(3n){
+						border-bottom: 1px solid rgba(202,202,202,.34);
+						-moz-border-image:url(../images/list.png) 30 30 rounded;	/* Old Firefox */*/
+						-webkit-border-image:url(../images/list.png) 30 30 rounded;	/* Safari and Chrome */
+						-o-border-image:url(../images/list.png) 30 30 rounded;		/* Opera */
+						border-image:url(../images/list.png) 30 30 rounded;
+					}
+/*		loading		*/
+#page_loading {
+	display: none;
+	background: #111111; 
+	opacity: 0.6;
+	height: 25px; 
+	width: 100%;  
+	position: absolute; 
+	bottom: 0px; 
+	left: 0px;
+	border-radius: 0 0 16px 16px;
+
+}
+	#page_loading span{
+		display: block;
+		height: 25px;
+		width: 25px;
+		margin: 0 auto;
+		background: url(../images/loading.gif) 0 0 no-repeat;
+	}
+
+
+/*		footer		*/
+#contact{
+	color: #313031;
+	font: normal 7px "SimSun",Sans-Serif;
+	position: relative;
+	margin: 16px auto 0;
+	text-align: center;
+}
+	#footicon{
+		width: 18px;
+		height: 10px;
+		background: url(../images/sprite.png) -90px -100px no-repeat;
+		display: inline-block;
+		position: relative;
+		top: 6px;
+	}
+	#contact a {
+		color: #313031;
+		text-decoration: underline;	
+	}
+
+
+/*		navagation		*/
+.nav{
+	width: 43%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	background-color: rgba(0,0,0,.8);
+	overflow: hidden;
+}
+	.menuplay{
+		right: -43%;		
+	}
+	.menuoff{
+		display: block;
+	}
+	/*		searchBar		*/
+	#search{
+		width: 91%;			
+		position: relative;
+		margin: 2% auto;
+		border-radius: 6px;
+		background: #f9f9f8;
+		overflow: hidden;
+	}
+		#search input{
+			padding: 10px 0 10px 4px;
+			border: 0;
+			float: left;
+			width: 75%;
+		}
+			#search input:input-placeholder{
+				color: #000;
+				font: normal 10px "Microsoft YaHei",Sans-Serif;
+			}
+			#search input:-webkit-input-placeholder{
+				color: #000;
+				font: normal 1em "Microsoft YaHei",Sans-Serif;
+			}
+			#search input:-moz-input-placeholder{
+				color: #000;
+				font: normal 1em "Microsoft YaHei",Sans-Serif;
+			}
+			#search input:-ms-input-placeholder{
+				color: #000;
+				font: normal 1em "Microsoft YaHei",Sans-Serif;
+			}
+		#search button{
+			border: 0;
+			float: right;
+			padding: 0;
+			position: relative;
+			top: 4px;
+			right: 5px;
+			background-color: #f9f9f8; 
+			width: 26px;
+			height: 27px;
+			background: url(../images/sprite.png) -117px -47px no-repeat;
+			margin-left: -26px;
+		}
+	/*		search选中时的样式		*/
+	.searchFocus{
+		overflow: visible;
+		left: -50%;
+		z-index: 999;
+	}
+		.searchbg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 3;
+			background-color: rgba(0,0,0,.4);
+		}
+
+
+	/*		South-North		*/
+	#south-north{
+		position: relative;
+		margin-top: 40px;
+	}
+		#south{
+			width: 80%;
+			height: 43px;
+			position: relative;
+			margin: 0 auto;
+		}
+			#southLogo{
+				width:43px;
+				height: 100%;	
+				float: left;
+			}
+			.southLogo{
+				background: url(../images/sprite.png) -45px -23px no-repeat;
+			}
+			.southLogoFocus{				
+				background: url(../images/sprite.png) -45px -66px no-repeat;
+			}
+			#south a{
+				font: normal 1.25em "Microsoft Yahei",Sans-Serif;
+				color: #fff;
+				display: block;
+				line-height: 43px;
+				text-decoration: none;
+				text-align: center;
+			}
+		#north{
+			width: 80%;
+			height: 43px;
+			position: relative;
+			margin: 24px auto 0; 
+		}
+			#northLogo{
+				width:43px;
+				height: 100%;
+				float: left;
+			}
+			.northLogo{
+				background: url(../images/sprite.png) 0 -23px no-repeat;
+			}
+			.northLogoFocus{				
+				background: url(../images/sprite.png) 0 -67px no-repeat;
+			}
+
+			#north a{
+				font: normal 1.25em "Microsoft Yahei",Sans-Serif;
+				color: #fff;
+				display: block;
+				line-height: 43px;
+				text-decoration: none;
+				text-align: center;
+			}
+
+#line{
+	width: 80%;
+	height: 2px;
+	background-color: #353535;
+	margin: 16px auto;
+}
+
+/*分类栏*/
+#sort{
+	margin: 6px auto;
+}
+	#sort ul{
+		width: 80%;
+		margin: 0 auto;
+	}
+		#sort ul li{
+			margin: 12px auto 0;
+			padding: 6px;
+			display: block;
+			border-radius: 4px;
+		}
+		.sortbg{
+			background-color: #000;
+		}		
+			.iconparcel,.iconpost,.iconprint,.iconorder,.iconreturn{
+				width: 14px;
+				height: 15px;					
+				float: left;
+				position: relative;
+				top: 4px;
+				left: 6px;
+			}
+			.iconparcel{
+				background: url(../images/sprite.png) -89px -24px no-repeat;
+			}
+			.iconpost{
+				width: 18px;
+				height: 15px;
+				background: url(../images/sprite.png) -87px -39px no-repeat;
+			}
+			.iconprint{
+				background: url(../images/sprite.png) -89px -54px no-repeat;
+			}
+			.iconorder{
+				background: url(../images/sprite.png) -89px -68px no-repeat;
+			}
+			.iconreturn{
+				background: url(../images/sprite.png) -88px -83px no-repeat;
+			}
+
+			.chn{
+				color: #fff;
+				font: normal 1.1em "Microsoft YaHei",Sans-Serif;
+				float: left;
+				margin-left:12px;
+				letter-spacing: 5px;
+				text-align: justify;
+			}
+				.space{
+					letter-spacing: 16px;
+				}
+			.eng{
+				color: #6eaa88;
+				font: normal 0.2em "Microsoft YaHei",Sans-Serif;
+				margin-left: 24px;
+				text-decoration: none;
+			}
+
+/*		搜索项的背景样式		*/
+
+.sortbg{
+	background-color: #000;
+}
+/*		蒙版		*/
+.bg{
+	height: 100%;
+	width: 57%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	background-color: rgba(0,0,0,0);
+}
+	.addbg{
+		z-index: 2;
+	}
