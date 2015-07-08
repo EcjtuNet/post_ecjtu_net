@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	var count = 1;
 	function loaded(assort){
 		
@@ -17,9 +18,6 @@ $(document).ready(function() {
 				var template = "<ul>{{#list}}<li class='info'><ul><li>{{addressee}}</li><li>{{area}}</li><li>{{type}}</li><li>{{time}}</li></ul></li>{{/list}}</ul>";
 				var views = Mustache.render(template, list);
 				$('#list').append(views);
-				//console.log(views)
-				console.log(assort)
-				console.log('http://post.ecjtu.net/api.php/list?callback=back&'+assort+'&limit=40&page='+count)
 			};
 			$.getScript('http://post.ecjtu.net/api.php/list?callback=back&'+assort+'&limit=40&page='+count);	
 		}
@@ -59,11 +57,11 @@ $(document).ready(function() {
 	
 
 	
-    $('#search input').on('focus', function (event) {// 搜索框的focus事件
-    	$(this).parent().css("width","200%");
-    });
+    // $('#search input').on('focus', function (event) {// 搜索框的focus事件
+    // 	  $(this).parent().css("width","200%");
+    // });
 	
-	$('.searchBar a').on('click', function (event) {// 控制搜索菜单的弹出
+	$('.searchBar').on('click', function (event) {// 控制搜索菜单的弹出
 		event.preventDefault();
 		$(this).parents('#header').siblings('.nav').addClass('menuplay menuoff').animate({"right":"0%"}, 200);
 		$('.bg').addClass('addbg');
@@ -315,6 +313,39 @@ $(document).ready(function() {
 			loaded('type=退件');
 		});
 		
+	});
+
+
+/*		搜索框搜索行为		*/
+	$('#btn').on('click', function(){
+		$('.nav').animate({"right": "-43%"}, 200).removeClass('menuplay');
+		$('.bg').removeClass('addbg');
+		var name = $(this).siblings("input").val();
+		$.getJSON('http://post.ecjtu.net/api.php/list?callback=?&key='+name, function(data){
+			function toArray(obj) {
+				var arr = [];
+				for (i in obj) {
+					if(obj.hasOwnProperty(i)) arr.push(obj[i]);
+				}
+				return arr;
+			}
+		
+				var list = {list: toArray(data)};
+				if (toArray(data).length > 0){
+					var template = "<ul>{{#list}}<li class='info'><ul><li>{{addressee}}</li><li>{{area}}</li><li>{{type}}</li><li>{{time}}</li></ul></li>{{/list}}</ul>";
+					var views = Mustache.render(template, list);				
+					$('#list').html('');
+					$('#list').append(views);
+				} else {
+					$('#error').css('display', 'block');
+					
+				}
+			
+		});
+	});
+	/*		错误提示框行为		*/
+	$('#errorForm button').on('click', function(){
+		$('#error').css('display', 'none');
 	});
 
 });

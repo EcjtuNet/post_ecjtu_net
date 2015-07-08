@@ -36,6 +36,8 @@ body {
 			margin-left:12px;
 		}
 			#logo a{
+				width: 108px;
+				height: 21px;
 				display: block;
 				color: transparent;
 				font-size: 0.001em;
@@ -236,7 +238,7 @@ body {
 			float: right;
 			padding: 0;
 			position: relative;
-			top: 4px;
+			top: 8px;
 			right: 5px;
 			background-color: #f9f9f8; 
 			width: 26px;
@@ -264,7 +266,7 @@ body {
 	/*		South-North		*/
 	#south-north{
 		position: relative;
-		margin-top: 40px;
+		margin-top: 24px;
 	}
 		#south{
 			width: 80%;
@@ -322,7 +324,7 @@ body {
 	width: 80%;
 	height: 2px;
 	background-color: #353535;
-	margin: 16px auto;
+	margin: 12px auto;
 }
 
 /*分类栏*/
@@ -334,7 +336,6 @@ body {
 		margin: 0 auto;
 	}
 		#sort ul li{
-			margin: 12px auto 0;
 			padding: 6px;
 			display: block;
 			border-radius: 4px;
@@ -370,9 +371,9 @@ body {
 
 			.chn{
 				color: #fff;
-				font: normal 1.1em "Microsoft YaHei",Sans-Serif;
+				font: normal 18px "Microsoft YaHei",Sans-Serif;
 				float: left;
-				margin-left:12px;
+				margin-left:10px;
 				letter-spacing: 5px;
 				text-align: justify;
 			}
@@ -381,7 +382,7 @@ body {
 				}
 			.eng{
 				color: #6eaa88;
-				font: normal 0.2em "Microsoft YaHei",Sans-Serif;
+				font: normal 0.8em "Microsoft YaHei",Sans-Serif;
 				margin-left: 24px;
 				text-decoration: none;
 			}
@@ -404,3 +405,35 @@ body {
 	.addbg{
 		z-index: 2;
 	}
+
+/*		搜索错误提示		*/
+#error{
+	display:none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	z-index: 5;
+}
+	#errorForm{
+		position: relative;
+		margin: 150px auto;
+		width: 300px;
+		height: 180px;
+		background-color: #fff;
+		border-radius: 6px;
+		font: normal 16px "YouYuan",Sans-Serif;
+	}
+		#errorForm p{
+			text-align: center;
+			padding: 32px 0;
+		}
+		#error button{
+			width: 120px;
+			height: 32px;
+			font: normal 16px "YouYuan",Sans-Serif;
+			border-radius: 6px;
+			text-align: center;
+			margin: 40px 90px 0;
+			border: 0;
+		}
