@@ -445,178 +445,178 @@ body {
 }
 
 
-@media screen and (max-width: 868px) {
-	#head {
-		width: 100%;
-		min-width: 636px;
-	}
-	#content {
-		width: 95%;
-	}
-	#bigBox {
-		position: relative;
-		width: 100%;
-		padding-left: 0px;
-	}
-	#smallBox {
-		margin: 0 auto;
-	}
-	#list {
-		overflow: auto;
-	}
-	#page {
-		position: static;
-		width: 362px;
-		height: 29px;
-		margin: 0 auto;
-		padding-top: 10px;
-		#arrowPre, ul, #arrowNex {
-			float: left;
-		}
-		#arrowPre, #arrowNex {
-			height: 29px;
-			background: none;
-			text-align: center;
-			text-indent: 16px;
-			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
-			color: #73a991;
-		}
-		ul {
-			display: inline-block;
-			width: 290px;
-			height: 29px;
-			margin: 0 10px;
-			margin-right: -7px; 
-		}
-		ul li, ul li.select {
-			display: inline-block;
-			float: left;
-		}
-		ul li.select {
-			background: lighten(#73a991, 10%);
-			border-radius: 29px;
-			color: #fff;
-		}
-		ul li a {
-			float: left;
-			width: 29px;
-			height: 29px;
-			margin: 0px;
-			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
-		}
-	}
-	#nav {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	#head {
-		width: 100%;
-		min-width: 480px;
-	}
-	#link ul {
-		display: none;
-	}
-	#content {
-		width: 95%;
-	}
-	#bigBox {
-		position: relative;
-		width: 100%;
-		padding-left: 0px;
-	}
-	#smallBox {
-		width: 100%;
-		min-width: 456px;
-		margin: 0 auto;
-		#title {
-			.num {
-				margin: 20px 0 0 5px;
-			}
-			.name {
-				margin: 20px 0 0 24px;
-			}
-			.sn {
-				margin: 20px 0 0 46px;
-			}
-			.sort {
-				margin: 20px 0 0 54px;
-			}
-			.date {
-				margin: 20px 0 0 60px;
-			}
-		}
-		#list {
-			ul li {
-				margin: 20px 0 0 0;
-			}
-			.num {
-				width: 10%;
-			}
-			.name {
-				width: 20%;
-			}
-			.sn {
-				width: 20%;
-			}
-			.sort {
-				width: 20%;
-			}
-			.date {
-				width: 30%;
-			}
-		}
-	}
-	#list {
-		overflow: auto;
-	}
-	#page {
-		position: static;
-		width: 362px;
-		height: 29px;
-		margin: 0 auto;
-		padding-top: 10px;
-		#arrowPre, ul, #arrowNex {
-			float: left;
-		}
-		#arrowPre, #arrowNex {
-			height: 29px;
-			background: none;
-			text-align: center;
-			text-indent: 16px;
-			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
-			color: #73a991;
-		}
-		ul {
-			display: inline-block;
-			width: 290px;
-			height: 29px;
-			margin: 0 10px;
-			margin-right: -7px; 
-		}
-		ul li, ul li.select {
-			display: inline-block;
-			float: left;
-		}
-		ul li.select {
-			background: lighten(#73a991, 10%);
-			border-radius: 29px;
-			color: #fff;
-		}
-		ul li a {
-			float: left;
-			width: 29px;
-			height: 29px;
-			margin: 0px;
-			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
-		}
-	}
-	#nav {
-		display: none;
-	}
-
-	#contact {
-		padding: 82px 0 0 0;
-	}
-}
+// @media screen and (max-width: 868px) {
+// 	#head {
+// 		width: 100%;
+// 		min-width: 636px;
+// 	}
+// 	#content {
+// 		width: 95%;
+// 	}
+// 	#bigBox {
+// 		position: relative;
+// 		width: 100%;
+// 		padding-left: 0px;
+// 	}
+// 	#smallBox {
+// 		margin: 0 auto;
+// 	}
+// 	#list {
+// 		overflow: auto;
+// 	}
+// 	#page {
+// 		position: static;
+// 		width: 362px;
+// 		height: 29px;
+// 		margin: 0 auto;
+// 		padding-top: 10px;
+// 		#arrowPre, ul, #arrowNex {
+// 			float: left;
+// 		}
+// 		#arrowPre, #arrowNex {
+// 			height: 29px;
+// 			background: none;
+// 			text-align: center;
+// 			text-indent: 16px;
+// 			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
+// 			color: #73a991;
+// 		}
+// 		ul {
+// 			display: inline-block;
+// 			width: 290px;
+// 			height: 29px;
+// 			margin: 0 10px;
+// 			margin-right: -7px;
+// 		}
+// 		ul li, ul li.select {
+// 			display: inline-block;
+// 			float: left;
+// 		}
+// 		ul li.select {
+// 			background: lighten(#73a991, 10%);
+// 			border-radius: 29px;
+// 			color: #fff;
+// 		}
+// 		ul li a {
+// 			float: left;
+// 			width: 29px;
+// 			height: 29px;
+// 			margin: 0px;
+// 			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
+// 		}
+// 	}
+// 	#nav {
+// 		display: none;
+// 	}
+// }
+//
+// @media screen and (max-width: 480px) {
+// 	#head {
+// 		width: 100%;
+// 		min-width: 480px;
+// 	}
+// 	#link ul {
+// 		display: none;
+// 	}
+// 	#content {
+// 		width: 95%;
+// 	}
+// 	#bigBox {
+// 		position: relative;
+// 		width: 100%;
+// 		padding-left: 0px;
+// 	}
+// 	#smallBox {
+// 		width: 100%;
+// 		min-width: 456px;
+// 		margin: 0 auto;
+// 		#title {
+// 			.num {
+// 				margin: 20px 0 0 5px;
+// 			}
+// 			.name {
+// 				margin: 20px 0 0 24px;
+// 			}
+// 			.sn {
+// 				margin: 20px 0 0 46px;
+// 			}
+// 			.sort {
+// 				margin: 20px 0 0 54px;
+// 			}
+// 			.date {
+// 				margin: 20px 0 0 60px;
+// 			}
+// 		}
+// 		#list {
+// 			ul li {
+// 				margin: 20px 0 0 0;
+// 			}
+// 			.num {
+// 				width: 10%;
+// 			}
+// 			.name {
+// 				width: 20%;
+// 			}
+// 			.sn {
+// 				width: 20%;
+// 			}
+// 			.sort {
+// 				width: 20%;
+// 			}
+// 			.date {
+// 				width: 30%;
+// 			}
+// 		}
+// 	}
+// 	#list {
+// 		overflow: auto;
+// 	}
+// 	#page {
+// 		position: static;
+// 		width: 362px;
+// 		height: 29px;
+// 		margin: 0 auto;
+// 		padding-top: 10px;
+// 		#arrowPre, ul, #arrowNex {
+// 			float: left;
+// 		}
+// 		#arrowPre, #arrowNex {
+// 			height: 29px;
+// 			background: none;
+// 			text-align: center;
+// 			text-indent: 16px;
+// 			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
+// 			color: #73a991;
+// 		}
+// 		ul {
+// 			display: inline-block;
+// 			width: 290px;
+// 			height: 29px;
+// 			margin: 0 10px;
+// 			margin-right: -7px;
+// 		}
+// 		ul li, ul li.select {
+// 			display: inline-block;
+// 			float: left;
+// 		}
+// 		ul li.select {
+// 			background: lighten(#73a991, 10%);
+// 			border-radius: 29px;
+// 			color: #fff;
+// 		}
+// 		ul li a {
+// 			float: left;
+// 			width: 29px;
+// 			height: 29px;
+// 			margin: 0px;
+// 			font: 16px/29px normal Microsoft Yahei, Arial, sans-serif;
+// 		}
+// 	}
+// 	#nav {
+// 		display: none;
+// 	}
+//
+// 	#contact {
+// 		padding: 82px 0 0 0;
+// 	}
+// }

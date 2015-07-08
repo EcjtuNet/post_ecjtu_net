@@ -85,4 +85,18 @@ function arrowClick(pre, nex, list, className) { // 单击箭头切换分页
 			jsonpCallback: 'func',
 		})
 	});
+
+	var searchIpt = $("input#search"),
+		submitIpt = $("input#submit");
+	submitIpt.click(function(event) {
+		event.preventDefault();
+		var name = searchIpt.val();
+		$.ajax({
+			url: URL + '&key=' + name,
+			type: 'GET',
+			dataType: 'jsonp',
+			data: '',
+			jsonpCallback: 'func',
+		});
+	});
 }

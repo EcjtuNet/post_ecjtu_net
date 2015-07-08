@@ -40,14 +40,25 @@ function dispInfo (parent, data) {
 		date = parent.find('.date');// 到件日期
 	// console.log(num);
 	for (var i = 0; i < parent.length; i++) {
-		idx = data.indexOf(data[i]) + 1;
-		num.eq(i).text(idx);
+		if (data[i]) {
+			idx = data.indexOf(data[i]) + 1;
+			num.eq(i).text(idx);
 
-		name.eq(i).text(data[i].addressee);
-		sn.eq(i).text(data[i].area);
-		sort.eq(i).text(data[i].type);
+			name.eq(i).text(data[i].addressee);
+			sn.eq(i).text(data[i].area);
+			sort.eq(i).text(data[i].type);
 
-		cal = data[i].time.substr(0, 10);
-		date.eq(i).text(cal);
+			cal = data[i].time.substr(0, 10);
+			date.eq(i).text(cal);
+		} else {
+			idx = data.indexOf(data[i]) + 1;
+			num.eq(i).text("");
+
+			name.eq(i).text("");
+			sn.eq(i).text("");
+			sort.eq(i).text("");
+
+			date.eq(i).text("");
+		}
 	};
 }
