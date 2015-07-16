@@ -1,9 +1,6 @@
 $(document).ready(function() {
-
-	var count = 1;
+	var count=1;
 	function loaded(assort){
-		
-
 		function draw() {
 			count++;
 			var back = window['back'] = function(data) {
@@ -23,12 +20,12 @@ $(document).ready(function() {
 		}
 
 		if(count === 1) {
-			if( $('#list').scrollTop() + $('#list').height() >= 890 ){
+			if( $('#list').scrollTop() + $('#list').height() >= 889 ){
 				draw();
 				console.log(count)
 			}
 		} else {
-			if ($('#list').scrollTop() + $('#list').height() >= 890*count) {
+			if ($('#list').scrollTop() + $('#list').height() >= 889*count) {
 				draw();
 				console.log(count)
 			}
@@ -38,7 +35,7 @@ $(document).ready(function() {
 
 	$.getJSON('http://post.ecjtu.net/api.php/list?callback=?&limit=40&page=1', function(data) {
 		function toArray(obj) {
-			var arr = [];0.
+			var arr = [];
 			for (i in obj) {
 				if(obj.hasOwnProperty(i)) arr.push(obj[i]);
 			}
@@ -51,7 +48,6 @@ $(document).ready(function() {
 	});
 	$('#list').bind('scroll', function(){
 		$contentLoadTriggered = false;
-		var count = 1;
 		loaded('');
 	});
 	
@@ -63,11 +59,11 @@ $(document).ready(function() {
 	
 	$('.searchBar').on('click', function (event) {// 控制搜索菜单的弹出
 		event.preventDefault();
-		$(this).parents('#header').siblings('.nav').addClass('menuplay menuoff').animate({"right":"0%"}, 200);
+		$(this).parents('#header').siblings('.nav').css('display', 'block').animate({"right":"0%"}, 200);
 		$('.bg').addClass('addbg');
 	});
 	$('.bg').on('click',function (event) {// 控制搜索菜单的缩回
-		$('.nav').animate({"right": "-43%"}, 200).removeClass('menuplay');
+		$('.nav').animate({"right": "-43%"}, 200).css('display', 'none');
 		$('.bg').removeClass('addbg');
 	});
 
@@ -75,6 +71,7 @@ $(document).ready(function() {
 	$('#south a').on('click', function (event) {// 控制南区搜索项	
 		event.preventDefault();
 		$('#list ul').html('');
+		// $('.list').replaceWith('<div class="slist"></div>')
 		if ($(this).siblings('#southLogo').hasClass('southLogoFoucus')) {
 			$(this).parent().siblings().children('#northLogo').removeClass('northLogoFocus');
 			$('.nav').delay(200).animate({"right": "-43%"}, 200).removeClass('menuplay');
@@ -86,7 +83,6 @@ $(document).ready(function() {
 			$('.nav').delay(200).animate({"right": "-43%"}, 200).removeClass('menuplay');
 			$('.bg').removeClass('addbg');
 		}
-		var count = 1;
 		$.getJSON('http://post.ecjtu.net/api.php/list?callback=?&limit=40&area=南区&page=1', function(data) {
 			function toArray(obj) {
 				var arr = [];
@@ -100,9 +96,9 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count = 1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
-
 			loaded('area=南区');
 		});
 		
@@ -110,7 +106,6 @@ $(document).ready(function() {
 	$('#north a').on('click', function (event) {// 控制北区搜索项
 		event.preventDefault();
 		$('#list ul').html('');
-		var count = 1;
 		if ($(this).siblings('#northLogo').hasClass('northLogoFocus')) {
 			$(this).parent().siblings().children('#southLogo').removeClass('southLogoFocus');
 			$('.nav').delay(200).animate({"right": "-43%"}, 200).removeClass('menuplay');
@@ -135,6 +130,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('area=北区');
@@ -179,6 +175,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('type=包裹');
@@ -189,7 +186,7 @@ $(document).ready(function() {
 	$('#sort li#post').on('click', function (event) { // 挂号信分类项
 		event.preventDefault();
 		$('#list ul').html('');
-		var count = 1;
+
 		if ( $(this).hasClass('sortbg')) {
 			$(this).siblings('.sortbg').removeClass('sortbg');
 			hasSortbg();
@@ -212,6 +209,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('type=挂号信');
@@ -222,7 +220,6 @@ $(document).ready(function() {
 	$('#sort li#print').on('click', function (event) {// 印刷品分类项
 		event.preventDefault();
 		$('#list ul').html('');
-		var count = 1;
 		if ( $(this).hasClass('sortbg')) {
 			$(this).siblings('.sortbg').removeClass('sortbg');
 			hasSortbg();
@@ -244,6 +241,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('type=印刷品');
@@ -254,7 +252,7 @@ $(document).ready(function() {
 	$('#sort li#order').on('click', function (event) {// 汇款单分类项
 		event.preventDefault();
 		$('#list ul').html('');
-		var count = 1;
+
 		if ( $(this).hasClass('sortbg')) {
 			$(this).siblings('.sortbg').removeClass('sortbg');
 			hasSortbg();
@@ -276,6 +274,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('type=汇款单');
@@ -286,7 +285,7 @@ $(document).ready(function() {
 	$('#sort li#return').on('click', function (event) {// 退件分类项
 		event.preventDefault();
 		$('#list ul').html('');
-		var count = 1;
+
 		if ( $(this).hasClass('sortbg')) {
 			$(this).siblings('.sortbg').removeClass('sortbg');
 			hasSortbg();
@@ -308,6 +307,7 @@ $(document).ready(function() {
 			var views = Mustache.render(template, list);
 			$('#list').append(views);
 		});
+		count=1;
 		$('#list').bind('scroll', function(){
 			$contentLoadTriggered = false;
 			loaded('type=退件');
@@ -336,13 +336,43 @@ $(document).ready(function() {
 					var views = Mustache.render(template, list);				
 					$('#list').html('');
 					$('#list').append(views);
+
 				} else {
 					$('#error').css('display', 'block');
 					
 				}
 			
 		});
+		$(this).siblings('input').blur();
 	});
+	$('input[type=text]').keypress( function(event){
+		if(event.which == 13){
+			$('.nav').animate({"right": "-43%"}, 200).removeClass('menuplay');
+			$('.bg').removeClass('addbg');
+			var name = $(this).val();
+			$.getJSON('http://post.ecjtu.net/api.php/list?callback=?&key='+name, function(data){
+				function toArray(obj) {
+					var arr = [];
+					for (i in obj) {
+						if(obj.hasOwnProperty(i)) arr.push(obj[i]);
+					}
+					return arr;
+				}
+			
+					var list = {list: toArray(data)};
+					if (toArray(data).length > 0){
+						var template = "<ul>{{#list}}<li class='info'><ul><li>{{addressee}}</li><li>{{area}}</li><li>{{type}}</li><li>{{time}}</li></ul></li>{{/list}}</ul>";
+						var views = Mustache.render(template, list);				
+						$('#list').html('');
+						$('#list').append(views);
+					} else {
+						$('#error').css('display', 'block');						
+					}
+				
+			});
+		}
+		$(this).siblings('input').blur();
+	})
 	/*		错误提示框行为		*/
 	$('#errorForm button').on('click', function(){
 		$('#error').css('display', 'none');

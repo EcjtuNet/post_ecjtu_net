@@ -93,7 +93,7 @@ body {
 					width: 30%;
 				}
 			/*		列表内容		*/	
-			#list{
+			.list{
 				overflow-y: scroll;
 				overflow-x: hidden;
 				height: 93%;
@@ -136,7 +136,7 @@ body {
 					}
 					li.info:nth-child(3n){
 						border-bottom: 1px solid rgba(202,202,202,.34);
-						-moz-border-image:url(../images/list.png) 30 30 rounded;	/* Old Firefox */*/
+						-moz-border-image:url(../images/list.png) 30 30 rounded;	/* Old Firefox */
 						-webkit-border-image:url(../images/list.png) 30 30 rounded;	/* Safari and Chrome */
 						-o-border-image:url(../images/list.png) 30 30 rounded;		/* Opera */
 						border-image:url(../images/list.png) 30 30 rounded;
@@ -191,14 +191,11 @@ body {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -43%;
 	display: none;
 	background-color: rgba(0,0,0,.8);
 	overflow: hidden;
 }
-	.menuplay{
-		right: -43%;		
-	}
 	.menuoff{
 		display: block;
 	}
